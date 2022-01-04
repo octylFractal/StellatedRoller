@@ -1,0 +1,16 @@
+[libraries]
+jetbrains-annotations = "org.jetbrains:annotations:23.0.0"
+
+spongepowered-math = "org.spongepowered:math:2.0.1"
+
+lwjgl-bom = "org.lwjgl:lwjgl-bom:3.3.0"
+lwjgl.module = "org.lwjgl:lwjgl"
+lwjgl-glfw.module = "org.lwjgl:lwjgl-glfw"
+lwjgl-jemalloc.module = "org.lwjgl:lwjgl-jemalloc"
+lwjgl-nanovg.module = "org.lwjgl:lwjgl-nanovg"
+lwjgl-nuklear.module = "org.lwjgl:lwjgl-nuklear"
+lwjgl-opengl.module = "org.lwjgl:lwjgl-opengl"
+
+junit-bom = "org.junit:junit-bom:5.8.2"
+junit-jupiter-api.module = "org.junit.jupiter:junit-jupiter-api"
+junit-jupiter-engine.module = "org.junit.jupiter:junit-jupiter-engine"
