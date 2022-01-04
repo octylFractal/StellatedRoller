@@ -29,6 +29,9 @@ import static net.octyl.stellatedroller.MicroVG.ezColorOpaque;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MAJOR;
 import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MINOR;
+import static org.lwjgl.glfw.GLFW.GLFW_CURSOR;
+import static org.lwjgl.glfw.GLFW.GLFW_CURSOR_HIDDEN;
+import static org.lwjgl.glfw.GLFW.GLFW_CURSOR_NORMAL;
 import static org.lwjgl.glfw.GLFW.GLFW_DONT_CARE;
 import static org.lwjgl.glfw.GLFW.GLFW_FALSE;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_A;
@@ -57,6 +60,7 @@ import static org.lwjgl.glfw.GLFW.glfwInit;
 import static org.lwjgl.glfw.GLFW.glfwMakeContextCurrent;
 import static org.lwjgl.glfw.GLFW.glfwPollEvents;
 import static org.lwjgl.glfw.GLFW.glfwSetFramebufferSizeCallback;
+import static org.lwjgl.glfw.GLFW.glfwSetInputMode;
 import static org.lwjgl.glfw.GLFW.glfwSetKeyCallback;
 import static org.lwjgl.glfw.GLFW.glfwSetTime;
 import static org.lwjgl.glfw.GLFW.glfwSetWindowContentScaleCallback;
@@ -277,6 +281,8 @@ public class StellatedRoller implements AutoCloseable {
                     videoMode.width(), videoMode.height(),
                     videoMode.refreshRate()
                 );
+                // Hide the cursor when in full screen.
+                glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
             } else if (wasFullScreen && !roller.isFeatureEnabled(Roller.Feature.FULL_SCREEN)) {
                 var center = getWindowPosForCenter();
                 glfwSetWindowMonitor(
@@ -285,6 +291,7 @@ public class StellatedRoller implements AutoCloseable {
                     DEFAULT_WIDTH, DEFAULT_HEIGHT,
                     GLFW_DONT_CARE
                 );
+                glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
             }
             wasFullScreen = roller.isFeatureEnabled(Roller.Feature.FULL_SCREEN);
         }
