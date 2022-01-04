@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) Gradle, Inc.
+ * Copyright (c) Octavia Togami <https://octyl.net>
+ *
+ * All Rights Reserved.
+ */
+
 package net.octyl.stellatedroller;
 
 import java.nio.Buffer;
