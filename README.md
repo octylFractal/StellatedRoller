@@ -1,5 +1,5 @@
 # StellatedRoller
-A hypotrochoid animation generator. Inspired by Mathologer's video on [The 3-4-7 miracle](https://www.youtube.com/watch?v=oEN0o9ZGmOM).
+A hypotrochoid animation visualizer. Inspired by Mathologer's video on [The 3-4-7 miracle](https://www.youtube.com/watch?v=oEN0o9ZGmOM).
 
 ## Running
 To run StellatedRoller, simply ensure that you have a JVM installed and do `./gradlew run`.
